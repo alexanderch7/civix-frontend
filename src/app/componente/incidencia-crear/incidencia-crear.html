@@ -1,0 +1,37 @@
+<p>incidencia-crear works!</p>
+<mat-card class="example-card">
+  <mat-card-title>Formulario de Proveedor</mat-card-title>
+  <mat-card-content>
+    <form [formGroup]="incidenciaForm" class="form-container" (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="fill">
+        <mat-label>Titulo</mat-label>
+        <input matInput formControlName="titulo" placeholder="Ingrese el titulo" />
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Descripción</mat-label>
+        <textarea matInput formControlName="descripcion" placeholder="Describa la incidencia"></textarea>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Direccion de referencia:</mat-label>
+        <input matInput formControlName="direccionReferencia" placeholder="Ingrese la direccion de referencia" />
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Latitud</mat-label>
+        <input matInput type="number" formControlName="latitud" placeholder="Ej. -12.0464" />
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Longitud</mat-label>
+        <input matInput type="number" formControlName="longitud" placeholder="Ej. -77.0428" />
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Prioridad</mat-label>
+        <input matInput formControlName="prioridad" placeholder="Ej. Alta, Media, Baja" />
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>ID Categoría (Objeto)</mat-label>
+        <input matInput formControlName="idCategoria" placeholder="ID o Objeto Categoria" />
+      </mat-form-field>
+      <button type="submit" mat-raised-button color="primary">Registrar incidencia</button>
+    </form>
+  </mat-card-content>
+</mat-card>
